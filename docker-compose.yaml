@@ -1,0 +1,14 @@
+version: '3'
+services:
+  room-chat:
+    container_name: room-chat
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: room-chat
+    ports:
+      - "8185:8185"
+    restart: always
+
+
+    command: npm run start
